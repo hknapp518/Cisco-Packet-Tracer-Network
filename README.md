@@ -17,3 +17,13 @@ In this project, I set up a small network using Cisco Packet Tracer to configure
 - Configured the DNS server to resolve 'google.com' to the web server at 192.168.2.4 and confirmed that I could access the webpage through HarryPC
 ![Cisco DNS](https://github.com/user-attachments/assets/f96b6b4f-b224-47e2-a906-f99e49288fd6)
 ![Cisco- From HarryPC we can type in google com and it brings up to the 192 168 2 4 web server](https://github.com/user-attachments/assets/5ee9b0ef-ac53-4805-b218-2326965b9fc5)
+
+- Configured the web server to accept both HTTP and HTTPS traffic.
+![Cisco- Webserver is setup for HTTP and HTTPS](https://github.com/user-attachments/assets/b1a5fd34-9100-4d7b-9ab6-6b290cc97518)
+
+- The other three PCs on the 192.168.1.0/24 VLAN were able to receive IP addresses through DHCP. To achieve this, I configured the router with the 'ip helper-address' command pointing to 192.168.2.2, the IP address of the DHCP server. This configuration allows the router to forward broadcast traffic, such as DHCP requests, across different subnets, enabling communication between the PCs and the DHCP server
+![CISCO IP address helper](https://github.com/user-attachments/assets/1bbc1c72-50ec-45e5-a70f-182d1d6e425a)
+
+## Conclusion
+
+- I successfully pinged all of my servers and endpoints to verify connectivity. All PCs were able to retrieve IP addresses via DHCP, and I was able to browse the web using the web server at 192.168.2.4. Using Cisco Packet Tracer, I was able to visually monitor the traffic flowing through the network. If any issues arose, I could examine the IOS model layers to identify the source of the problem and troubleshoot accordingly
